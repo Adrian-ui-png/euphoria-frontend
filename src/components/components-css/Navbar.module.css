@@ -1,0 +1,363 @@
+.nav {
+  position: fixed;
+
+  top: 1.2rem;
+  left: 0;
+  right: 0;
+
+  margin: 0 auto;
+
+  width: calc(100% - 2rem);
+  max-width: 1450px;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 1.3rem;
+
+  border-radius: 24px;
+
+  background:
+    rgba(18, 14, 11, 0.18);
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  transition: 0.35s ease;
+}
+
+.scrolled {
+  background:
+    rgba(16, 12, 10, 0.72);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.18);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 14px;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c78158,
+      #9f5e3d
+    );
+
+  color: white;
+  font-size: 1.1rem;
+}
+
+.logoContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoText {
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+.logoSub {
+  color: rgba(255,255,255,0.62);
+  font-size: 0.72rem;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+}
+
+.desktopLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  border: none;
+  background: transparent;
+
+  color: rgba(255,255,255,0.76);
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+
+  transition: 0.3s ease;
+}
+
+.link:hover {
+  color: white;
+}
+
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.locationBadge {
+  padding: 0.7rem 1rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: rgba(255,255,255,0.78);
+
+  font-size: 0.82rem;
+
+  backdrop-filter: blur(12px);
+}
+
+.bookBtn {
+  border: none;
+
+  padding: 0.95rem 1.4rem;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c78158,
+      #9f5e3d
+    );
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+
+  font-size: 0.92rem;
+}
+
+.bookBtn:hover {
+  transform: translateY(-3px);
+}
+
+.menuToggle {
+  display: none;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 16px;
+
+  border: none;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.bar,
+.bar1open,
+.bar2open,
+.bar3open {
+  width: 22px;
+  height: 2px;
+
+  background: white;
+
+  border-radius: 999px;
+
+  transition: 0.3s ease;
+}
+
+.bar1open {
+  transform:
+    rotate(45deg)
+    translateY(5px);
+}
+
+.bar2open {
+  opacity: 0;
+}
+
+.bar3open {
+  transform:
+    rotate(-45deg)
+    translateY(-5px);
+}
+
+.mobileMenu {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 999;
+
+  background:
+    rgba(10,8,7,0.92);
+
+  backdrop-filter: blur(18px);
+
+  padding: 7rem 1.5rem 2rem;
+}
+
+.mobileContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobileTop span {
+  color: #e6bda2;
+
+  letter-spacing: 0.25rem;
+
+  text-transform: uppercase;
+
+  font-size: 0.72rem;
+}
+
+.mobileTop h2 {
+  margin-top: 1rem;
+
+  color: white;
+
+  font-size: 3rem;
+
+  line-height: 1;
+
+  font-family: "Playfair Display", serif;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  margin-top: 4rem;
+}
+
+.mobileLink {
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  text-align: left;
+
+  font-size: 1.5rem;
+
+  padding: 1rem 0;
+
+  cursor: pointer;
+}
+
+.mobileFooter {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.mobileFooter span {
+  padding: 0.8rem 1rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  color: rgba(255,255,255,0.75);
+
+  font-size: 0.82rem;
+}
+
+.mobileBookBtn {
+  border: none;
+
+  width: 100%;
+
+  padding: 1.1rem;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c78158,
+      #9f5e3d
+    );
+
+  color: white;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .desktopLinks,
+  .rightActions {
+    display: none;
+  }
+
+  .menuToggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    top: 0.8rem;
+
+    width: calc(100% - 1rem);
+
+    padding: 0.9rem 1rem;
+
+    border-radius: 20px;
+  }
+
+  .logoText {
+    font-size: 0.95rem;
+  }
+
+  .logoSub {
+    font-size: 0.65rem;
+  }
+
+  .mobileTop h2 {
+    font-size: 2.5rem;
+  }
+
+  .mobileLink {
+    font-size: 1.3rem;
+  }
+}

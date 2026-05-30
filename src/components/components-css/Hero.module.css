@@ -1,0 +1,287 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 920px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: #16110d;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomHero 18s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.72),
+      rgba(0,0,0,0.28)
+    ),
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.1)
+    );
+  z-index: 1;
+}
+
+.texture {
+  position: absolute;
+  inset: 0;
+  background: url("/textures/grain.png");
+  opacity: 0.06;
+  z-index: 2;
+}
+
+.gradientGlow {
+  position: absolute;
+  top: -180px;
+  right: -150px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: rgba(184, 117, 76, 0.22);
+  filter: blur(120px);
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #efcdb7;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  font-size: 0.8rem;
+}
+
+.title {
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: 0.95;
+  color: white;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1.5rem;
+}
+
+.title span {
+  display: block;
+  color: #f0d1bc;
+}
+
+.subtitle {
+  max-width: 650px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.9;
+  font-size: 1.08rem;
+  margin-bottom: 2.5rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: white;
+  font-size: 0.92rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btnPrimary,
+.btnSecondary {
+  border: none;
+  cursor: pointer;
+  transition: 0.35s ease;
+  font-size: 1rem;
+}
+
+.btnPrimary {
+  background: #c27a53;
+  color: white;
+  padding: 1.15rem 2rem;
+  border-radius: 18px;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-4px);
+  background: #b16843;
+}
+
+.btnSecondary {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  padding: 1.15rem 2rem;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+}
+
+.btnSecondary:hover {
+  transform: translateY(-4px);
+}
+
+.locationStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.locationStrip span {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.92rem;
+}
+
+.floatingCard {
+  position: absolute;
+  right: 4rem;
+  bottom: 5rem;
+  z-index: 4;
+  width: 360px;
+  padding: 2rem;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.25);
+}
+
+.cardTop span {
+  color: #efcdb7;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 0.72rem;
+}
+
+.floatingCard h3 {
+  color: white;
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+.floatingCard p {
+  color: rgba(255,255,255,0.78);
+  line-height: 1.8;
+}
+
+.cardStats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cardStats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardStats strong {
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.cardStats span {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.82rem;
+}
+
+.scrollHint {
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+
+.scrollLine {
+  width: 2px;
+  height: 50px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 999px;
+}
+
+@media (max-width: 1200px) {
+  .floatingCard {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 850px;
+    padding: 1.2rem;
+  }
+
+  .title {
+    font-size: 4.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+  }
+
+  .locationStrip {
+    gap: 0.8rem;
+  }
+
+  .locationStrip span {
+    font-size: 0.82rem;
+  }
+
+  .scrollHint {
+    bottom: 1rem;
+  }
+}

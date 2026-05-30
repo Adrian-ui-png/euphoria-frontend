@@ -1,0 +1,267 @@
+.section {
+  position: relative;
+  padding: 7rem 1.5rem;
+  background:
+    linear-gradient(
+      to bottom,
+      #f6f0e7,
+      #efe1cf
+    );
+  overflow: hidden;
+}
+
+.texture {
+  position: absolute;
+  inset: 0;
+  background: url("/textures/grain.png");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.header {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  font-size: 0.8rem;
+  color: #b06f4f;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  color: #2d231a;
+  font-family: "Playfair Display", serif;
+}
+
+.sub {
+  max-width: 720px;
+  margin: auto;
+  line-height: 1.9;
+  color: #67584d;
+  font-size: 1.05rem;
+}
+
+.topStorySection {
+  max-width: 1450px;
+  margin: auto auto 5rem;
+}
+
+.storyImage {
+  position: relative;
+  height: 850px;
+  overflow: hidden;
+  border-radius: 40px;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.15);
+}
+
+.storyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.storyOverlay {
+  position: absolute;
+  inset: 0;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.15)
+    );
+}
+
+.storyOverlay span {
+  color: #f0d7c2;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+}
+
+.storyOverlay h3 {
+  max-width: 760px;
+  color: white;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.05;
+  font-family: "Playfair Display", serif;
+}
+
+.statsRow {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+}
+
+.statCard {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(12px);
+  border-radius: 28px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.statCard h4 {
+  font-size: 2rem;
+  color: #2f5f50;
+  margin-bottom: 0.5rem;
+}
+
+.statCard p {
+  color: #66584d;
+}
+
+.grid {
+  max-width: 1450px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.2rem;
+}
+
+.card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.large {
+  grid-column: span 2;
+  height: 700px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.15)
+    );
+}
+
+.content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 2;
+}
+
+.content span {
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.content h3 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 0.8rem;
+  font-family: "Playfair Display", serif;
+}
+
+.quoteSection {
+  max-width: 900px;
+  margin: 7rem auto 0;
+  text-align: center;
+}
+
+.quoteSection p {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.6;
+  color: #2d241b;
+  font-family: "Playfair Display", serif;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .large {
+    grid-column: span 2;
+  }
+
+  .statsRow {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .storyImage {
+    height: 620px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 1rem;
+  }
+
+  .storyImage {
+    height: 500px;
+    border-radius: 28px;
+  }
+
+  .storyOverlay {
+    padding: 2rem;
+  }
+
+  .storyOverlay h3 {
+    font-size: 2.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .large {
+    grid-column: span 1;
+    height: 500px;
+  }
+
+  .card {
+    height: 380px;
+    border-radius: 24px;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .content h3 {
+    font-size: 1.6rem;
+  }
+
+  .quoteSection p {
+    font-size: 1.7rem;
+  }
+}

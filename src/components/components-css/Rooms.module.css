@@ -1,0 +1,580 @@
+.section {
+  position: relative;
+  padding: 7rem 1.5rem;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #f7f1e8,
+      #efe2d0
+    );
+
+  overflow: hidden;
+}
+
+.texture {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("/textures/grain.png");
+
+  opacity: 0.05;
+
+  pointer-events: none;
+}
+
+.header {
+  max-width: 920px;
+
+  margin: 0 auto 5rem;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  letter-spacing: 0.35rem;
+
+  text-transform: uppercase;
+
+  color: #b16e4f;
+
+  font-size: 0.8rem;
+
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size:
+    clamp(3rem, 7vw, 6rem);
+
+  line-height: 1;
+
+  color: #2b2219;
+
+  margin-bottom: 1.5rem;
+
+  font-family:
+    "Playfair Display",
+    serif;
+}
+
+.sub {
+  max-width: 760px;
+
+  margin: auto;
+
+  color: #66584c;
+
+  line-height: 1.9;
+
+  font-size: 1.05rem;
+}
+
+.hostMessage {
+  margin: 3rem auto 0;
+  padding: 1.8rem 2.2rem;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 28px;
+  max-width: 760px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.hostLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #b16e4f;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  margin-top: 0;
+}
+
+.hostText {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a3e3d;
+  font-style: italic;
+  margin: 0;
+}
+
+/* STORY BANNER */
+
+.storyBanner {
+  position: relative;
+
+  max-width: 1450px;
+
+  margin: 0 auto 6rem;
+
+  border-radius: 40px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.14);
+}
+
+.storyBanner img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.storyOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.18)
+    );
+
+  z-index: 1;
+}
+
+.storyContent {
+  position: absolute;
+
+  bottom: 4rem;
+  left: 4rem;
+
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+.storyContent span {
+  color: #efcdb7;
+
+  letter-spacing: 0.3rem;
+
+  text-transform: uppercase;
+
+  font-size: 0.8rem;
+}
+
+.storyContent h3 {
+  color: white;
+
+  margin-top: 1rem;
+
+  font-size:
+    clamp(3rem, 6vw, 5rem);
+
+  line-height: 1;
+
+  font-family:
+    "Playfair Display",
+    serif;
+}
+
+/* GRID */
+
+.grid {
+  max-width: 1450px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap: 2rem;
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+
+  background:
+    rgba(255,255,255,0.68);
+
+  backdrop-filter: blur(16px);
+
+  border-radius: 34px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255,255,255,0.5);
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,0.06);
+}
+
+.featured {
+  transform: scale(1.02);
+}
+
+.featuredBadge {
+  position: absolute;
+
+  top: 1.5rem;
+  right: 1.5rem;
+
+  z-index: 4;
+
+  padding: 0.8rem 1rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.16);
+
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.12rem;
+
+  text-transform: uppercase;
+}
+
+/* IMAGE FIX */
+
+.imageWrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #efe2d0;
+
+  padding: 1rem;
+
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: auto;
+
+  max-width: 100%;
+
+  height: auto;
+
+  max-height: 420px;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 24px;
+
+  transition:
+    transform 0.9s ease;
+}
+
+.card:hover .imageWrapper img {
+  transform: scale(1.03);
+}
+
+/* OVERLAY */
+
+.imageOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.08)
+    );
+}
+
+/* TEXT */
+
+.imageContent {
+  position: absolute;
+
+  left: 2rem;
+  bottom: 2rem;
+
+  z-index: 2;
+}
+
+.imageContent span {
+  color:
+    rgba(255,255,255,0.75);
+
+  letter-spacing: 0.18rem;
+
+  text-transform: uppercase;
+
+  font-size: 0.72rem;
+}
+
+.imageContent h3 {
+  margin-top: 0.7rem;
+
+  color: white;
+
+  font-size: 2.5rem;
+
+  font-family:
+    "Playfair Display",
+    serif;
+}
+
+/* BODY */
+
+.body {
+  padding: 2rem;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.tagline {
+  color: #a26848;
+
+  margin-bottom: 1rem;
+
+  letter-spacing: 0.08rem;
+}
+
+.desc {
+  line-height: 1.9;
+
+  color: #66584d;
+
+  margin-bottom: 1.7rem;
+}
+
+/* AMENITIES */
+
+.amenities {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+
+  margin-bottom: 2rem;
+}
+
+.amenity {
+  padding: 0.75rem 1rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(0,0,0,0.04);
+
+  color: #57483e;
+
+  font-size: 0.82rem;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+}
+
+.price {
+  color: #2b2219;
+
+  font-size: 1.6rem;
+
+  font-weight: 600;
+}
+
+.perNight {
+  font-size: 0.9rem;
+
+  color: #7a6b5e;
+}
+
+.bookBtn {
+  border: none;
+
+  padding: 1rem 1.4rem;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c78158,
+      #9f5e3d
+    );
+
+  color: white;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+}
+
+.bookBtn:hover {
+  transform: translateY(-4px);
+}
+
+/* GLOW */
+
+.cardGlow {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -70px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  opacity: 0.18;
+
+  filter: blur(60px);
+}
+
+/* QUOTE */
+
+.bottomQuote {
+  max-width: 900px;
+
+  margin: 7rem auto 0;
+
+  text-align: center;
+}
+
+.bottomQuote p {
+  font-size:
+    clamp(1.7rem, 3vw, 2.7rem);
+
+  line-height: 1.6;
+
+  color: #2d241b;
+
+  font-family:
+    "Playfair Display",
+    serif;
+}
+
+.reviewsContainer {
+  max-width: 1200px;
+  margin: 6rem auto 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding-inline: 1rem;
+}
+
+.reviewsEyebrow {
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: #b16e4f;
+  font-size: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.reviewsTitle {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  color: #2b2219;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 5rem 1rem;
+  }
+
+  .storyBanner {
+    border-radius: 28px;
+  }
+
+  .storyContent {
+    left: 2rem;
+    bottom: 2rem;
+  }
+
+  .storyContent h3 {
+    font-size: 2.7rem;
+  }
+
+  .imageWrapper img {
+    max-height: 320px;
+  }
+
+  .imageContent h3 {
+    font-size: 2rem;
+  }
+
+  .body {
+    padding: 1.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bookBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bottomQuote p {
+    font-size: 1.8rem;
+  }
+
+  .hostMessage {
+    padding: 1.2rem 1.5rem;
+    border-radius: 20px;
+    margin-top: 2rem;
+  }
+
+  .hostText {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .reviewsContainer {
+    margin-top: 4rem;
+  }
+
+  .reviewsTitle {
+    margin-bottom: 1.5rem;
+  }
+}
