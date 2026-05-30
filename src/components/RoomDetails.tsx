@@ -19,9 +19,23 @@ export default function RoomDetails(): JSX.Element {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if (slug) {
-      setRoom(getRoomBySlug(slug));
-    }
+    const refreshRoom = () => {
+      if (slug) {
+        setRoom(getRoomBySlug(slug));
+      }
+    };
+
+    refreshRoom();
+
+    window.addEventListener("storage", refreshRoom);
+    window.addEventListener("pageshow", refreshRoom);
+    window.addEventListener("focus", refreshRoom);
+
+    return () => {
+      window.removeEventListener("storage", refreshRoom);
+      window.removeEventListener("pageshow", refreshRoom);
+      window.removeEventListener("focus", refreshRoom);
+    };
   }, [slug]);
 
   if (!room) {

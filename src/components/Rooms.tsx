@@ -12,7 +12,15 @@ export default function Rooms(): JSX.Element {
   const [rooms, setRooms] = useState<Room[]>([]);
 
   useEffect(() => {
-    setRooms(getRooms());
+    const refreshRooms = () => {
+      setRooms(getRooms());
+    };
+
+    refreshRooms();
+
+    window.addEventListener("storage", refreshRooms);
+    window.addEventListener("pageshow", refreshRooms);
+    window.addEventListener("focus", refreshRooms);
 
     // Load Elfsight Google Reviews script
     const scriptId = "elfsight-platform-script";
@@ -24,6 +32,12 @@ export default function Rooms(): JSX.Element {
       script.async = true;
       document.body.appendChild(script);
     }
+
+    return () => {
+      window.removeEventListener("storage", refreshRooms);
+      window.removeEventListener("pageshow", refreshRooms);
+      window.removeEventListener("focus", refreshRooms);
+    };
   }, []);
   return (
     <section
