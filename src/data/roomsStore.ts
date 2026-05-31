@@ -92,7 +92,7 @@ const DEFAULT_ROOMS: Room[] = [
   {
     id: "courtyard-residence",
     slug: "courtyard-residence",
-    name: "gentle-rise",
+    name: "Gentle Rise",
     tagline: "Private tropical residence",
     type: "Private Full BHK",
     price: 2200,
@@ -105,19 +105,19 @@ const DEFAULT_ROOMS: Room[] = [
   {
     id: "balcony-residence",
     slug: "balcony-residence",
-    name: "Balcony Residence",
+    name: "Tranquil Cove",
     tagline: "Elevated coastal living",
     type: "Private Full BHK",
     price: 2200,
-    description: "A premium private residence with elegant interiors, spacious comfort, and a peaceful Fort Kochi atmosphere.",
+    description: "A spacious private residence with elegant interiors, spacious comfort, and a peaceful Fort Kochi atmosphere.",
     amenities: ["Private BHK", "Balcony", "Kitchen", "Premium interiors"],
-    image: gr1,
+    image: bc4,
     gallery: [bc1, bc2, bc3, bc4, bc5, bc6, bc7, bc8],
     color: "#876552"
   }
 ];
 
-const LOCAL_STORAGE_KEY = "euphoria_rooms_data_v3";
+const LOCAL_STORAGE_KEY = "euphoria_rooms_data_v6";
 
 export function getRooms(): Room[] {
   const data = localStorage.getItem(LOCAL_STORAGE_KEY);

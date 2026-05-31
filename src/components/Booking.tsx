@@ -45,7 +45,7 @@ const rooms: Room[] = [
   },
   {
     id: "courtyard-residence",
-    name: "gentle-rise",
+    name: "Gentle Rise",
     type: "Private Full BHK",
     price: 4800,
     description:
@@ -53,7 +53,7 @@ const rooms: Room[] = [
   },
   {
     id: "balcony-residence",
-    name: "Balcony Residence",
+    name: "Tranquil Cove",
     type: "Private Full BHK",
     price: 5200,
     description:

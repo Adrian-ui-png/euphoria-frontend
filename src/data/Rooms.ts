@@ -14,14 +14,14 @@ import gr7 from "../assets/rooms/gentel-rise-7.jpg";
 import gr8 from "../assets/rooms/gentel-rise-8.jpg";
 import gr9 from "../assets/rooms/gentel-rise-9.jpg";
 
-import bc1 from "../assets/rooms/balcon/1.jpeg"
-import bc2 from "../assets/rooms/balcon/2.jpeg"
-import bc3 from "../assets/rooms/balcon/3.jpeg"
-import bc4 from "../assets/rooms/balcon/4.jpeg"
-import bc5 from "../assets/rooms/balcon/5.jpeg"
-import bc6 from "../assets/rooms/balcon/6.jpeg"
-import bc7 from "../assets/rooms/balcon/7.jpeg"
-import bc8 from "../assets/rooms/balcon/8.jpeg"
+import bc1 from "../assets/rooms/balcon/1.jpg"
+import bc2 from "../assets/rooms/balcon/2.jpg"
+import bc3 from "../assets/rooms/balcon/3.jpg"
+import bc4 from "../assets/rooms/balcon/4.jpg"
+import bc5 from "../assets/rooms/balcon/5.jpg"
+import bc6 from "../assets/rooms/balcon/6.jpg"
+import bc7 from "../assets/rooms/balcon/7.jpg"
+import bc8 from "../assets/rooms/balcon/8.jpg"
 
 
 
@@ -123,9 +123,9 @@ export const rooms = [
 
   {
     slug: "balcony-residence",
-    name: "Balcony Residence",
+    name: "Tranquil Cove",
     price: 2200,
-    cover: gr1,
+    cover: bc4,
 
     gallery: [
       bc1,
@@ -153,7 +153,7 @@ export const rooms = [
 
   {
     slug: "courtyard-residence",
-    name: "gentle-rise",
+    name: "Gentle Rise",
     price: 2200,
     cover: gr1,
 
